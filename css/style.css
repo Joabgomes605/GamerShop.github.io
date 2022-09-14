@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+html, body {
+    overflow-x: hidden !important;
+}
+
+/***********
+ * Header  *
+ ***********/
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    width: 35%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    margin-left: 20px;
+}
+nav,ul {
+    width: 60%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    list-style: none;
+    gap: 20px;
+}
+nav,ul,li > a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+nav,ul,li > a:hover{
+    transition: 0.5s;
+    color: #DD1418;
+}
+.carrinho {
+    width: 10%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/***********
+ * Main  *
+ ***********/
+main {
+    width: 100%;
+    background-color: #e9e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner_principal{
+    width: 100%;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/banner_principal.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.titulo_principal{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    gap: 5px;
+}
+.titulo_principal h1{
+    font-size: 2em;
+}
+.comprar_principal{
+    width: 80%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.comprar_principal a {
+    padding: 10px 30px;
+    background-color: #DD1418;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.produtos_destaques {
+    width: 80%;
+    height: 450px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo_destaques {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.card_destaques{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cards{
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.imagem_card{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagem_card img{
+    width: 50%;
+}
+.preco{
+    width: 100%;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+.preco p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+.preco span{
+    font-weight: 500;
+}
+.preco small{
+    color: #619D00;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.produtos_estrela{
+    width: 76%;
+    height: 250px;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}
+.titulo_estrela{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.card_estrela {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.bg_cadeira{
+    width: 40%;
+    height: 160px;
+    border-radius: 10px;
+    background-image: url("../img/banner-estrela.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.bg_computadores{
+    width: 40%;
+    height: 160px;
+    border-radius: 10px;
+    background-image: url("../img/banner-estrela-1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/***********
+ * footer *
+ ***********/
+footer{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    width: 100%;
+    height: 215px;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+.footer .logo_footer{
+    width: 50%;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo_footer img {
+    margin-left: 50px;
+}
+.redes_sociais{
+    width: 50%;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.redes{
+    width: 30%;
+    height: 30px;
+    margin-right: 20px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.link_redes{
+    width: 33%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 33px;
+}
+
+.copy{
+    width: 100%;
+    height: 25px;
+    background-color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
