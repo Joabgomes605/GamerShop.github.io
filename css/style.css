@@ -51,12 +51,19 @@ nav,ul,li > a:hover{
     transition: 0.5s;
     color: #DD1418;
 }
+.btn-mobile{
+    display: none;
+}
 .carrinho {
     width: 5%;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.carrinho a span{
+    color: #DD1418;
+    margin-right: 20px;
 }
 
 /***********
@@ -148,6 +155,7 @@ main {
     width: 100%;
     height: 400px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -423,68 +431,185 @@ footer{
 }
 
 @media (min-width:1440px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    .logo a img{
+        margin-left: 30px;
+    }
+    .carrinho a span{
+        margin-right: 30px;
+    }
     .chat{
         position: fixed;
-        bottom: 30px;
+        right: -185px;
+        bottom: 40px;
     }
     .chat img:hover{
         cursor: pointer;
-        -webkit-animation: rotate-center 1s ease-in-out backwards;
-        animation: rotate-center 1s ease-in-out backwards;
+        width: 21%;
+    }
+    .logo_footer img{
+        width: 35%;
     }
     
-    @-webkit-keyframes rotate-center {
-        0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
-      @keyframes rotate-center {
-        0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
-        }
-      }
+    .redes_sociais .redes > p {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width:1024px) {
+    html, body {
+        overflow-x: hidden !important;
+    }
+    header{
+        width: 100vw;
+    }
+    main{
+        width: 100vw;
+    }
+    footer{
+        width: 100vw;
+    }
     .chat{
         position: fixed;
-        right: -140px;
-        bottom: 10px;
+        right: -135px;
+        bottom: 40px;
     }
     .chat img:hover{
         cursor: pointer;
-        -webkit-animation: rotate-center 1s ease-in-out backwards;
-        animation: rotate-center 1s ease-in-out backwards;
+        width: 21%;
     }
-    
-    @-webkit-keyframes rotate-center {
+}
+
+@media (max-width:768px) {
+    header{
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 40%;
+    }
+    #nav{
+        order: -1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 30%;
+    }
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 30%;
+        height:0px;
+        top: 80px;
+        left: 0px;
+        background-color: #222222;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu{
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        visibility: visible;
+    }
+    #menu a:hover {
+        transition: 0.3s;
+        color: #DD1418;
+    }
+    .btn-mobile {
+        display: flex;
+        margin-left: 30px;
+    }
+    .carrinho{
+        width: 30%;
+        justify-content: flex-end;
+    }
+    .carrinho a span {
+        margin-right: 30px;
+    }
+    .chat {
+        position: fixed;
+        right: -90px;
+        bottom: 15px; 
+    }
+    .chat img{
+        width: 25%;
+    }
+    .chat img:hover{
+        cursor: pointer;
+        width: 27%;
+    }
+    .banner_principal{
+        max-height: 350px;
+    }
+    .titulo_principal h1 {
+        font-size: 1.6rem;
+    }
+    .produtos_destaques{
+        height: 600px;
+    }
+    .card_destaques{
+        margin-top: 20px;
+    }
+    .cards{
+        width: 35%;
+        height: 250px;
+        margin: 10px;
+    }
+    .cards:hover{
+        width: 36%;
+        cursor: pointer;
+        -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @-webkit-keyframes shadow-drop-2-center {
         0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         }
         100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
+          -webkit-transform: translateZ(50px);
+                  transform: translateZ(50px);
+          -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
         }
       }
-      @keyframes rotate-center {
+      @keyframes shadow-drop-2-center {
         0% {
-          -webkit-transform: rotate(0);
-                  transform: rotate(0);
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         }
         100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg);
+          -webkit-transform: translateZ(50px);
+                  transform: translateZ(50px);
+          -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+                  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
         }
+      }
+      .bg_cadeira {
+        width: 47%;
+        height: 130px;
+      }
+      .bg_computadores{
+        width: 47%;
+        height: 130px;
       }
 }
