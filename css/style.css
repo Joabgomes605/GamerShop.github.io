@@ -538,6 +538,7 @@ footer{
         justify-content: center;
         gap: 30px;
         visibility: visible;
+        overflow-y: auto;
     }
     #menu a:hover {
         transition: 0.3s;
@@ -545,7 +546,42 @@ footer{
     }
     .btn-mobile {
         display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
         margin-left: 30px;
+        border: none;
+        background:none;
+        cursor: pointer;
+        color: #ffffff;
+        gap: .5rem;
+    }
+    #hamburgue{
+        border-top: 2px solid #ffffff;
+        width: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    #hamburgue::after, #hamburgue::before{
+        content: "";
+        width: 25px;
+        height: 2px;
+        margin-top: 4px;
+        background:currentColor;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburgue{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburgue::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    #nav.active #hamburgue::before{
+        transform: rotate(135deg);
     }
     .carrinho{
         width: 30%;

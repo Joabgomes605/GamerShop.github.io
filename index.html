@@ -22,9 +22,11 @@
 
             <nav id="nav">
 
-                <button id="btn-mobile" class="btn-mobile">Menu</button>
+                <button id="btn-mobile" class="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">
+                    <span id="hamburgue"></span>
+                </button>
 
-                <ul id="menu" class="menu">
+                <ul id="menu" class="menu" role="menu">
                     <li><a href="#">Categorias</a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Vestuário</a></li>
